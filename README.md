@@ -19,3 +19,4 @@ A simple calculator with 2 input fields and some options to perform different op
 ## Screenshot
 
 <img src="https://imgur.com/sTJUKFy.png"/>
+# CI-CD-project
