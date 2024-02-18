@@ -9,7 +9,8 @@ COPY requirements.txt .
 
 # Install the requirements.txt in container 
 RUN pip install -r requirements.txt 
-
+# Expose the port 
+EXPOSE 5000
 # Run the Python app 
 CMD ["python3","app.py"] 
 
