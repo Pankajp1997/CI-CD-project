@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: calci-app
+  name: calci-deploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calci-app
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: calci-app
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        
+~            
