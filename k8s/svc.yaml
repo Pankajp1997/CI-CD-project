@@ -2,14 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: calci-app
-  name: svc-node
+    app: solar-system
+  name: solar-system-service
 spec:
   ports:
-  - name: 80-32736
-    port: 80
+  - port: 80 #change to 80
     protocol: TCP
-    targetPort: 32736
+    targetPort: 80 #change to 80
   selector:
-    app: calci-app
-  type: NodePort  
+    app: solar-system
+  type: NodePort
