@@ -12,6 +12,4 @@ spec:
     targetPort: 32736
   selector:
     app: calci-app
-  type: NodePort
-status:
-~   
+  type: NodePort  
