@@ -2,20 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: calci-app
-  name: calci-deploy
-  namespace: default
+    app: solar-system
+  name: solar-system
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: calci-app
+      app: solar-system
+  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: calci-app
+        app: solar-system
     spec:
       containers:
-      - image: nginx
-        name: nginx          
+      - image: siddharth67/solar-system:v9
+        name: solar-system
+        imagePullPolicy: Always
+        ports: 
+        - containerPort: 80  
